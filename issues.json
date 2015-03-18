@@ -1,0 +1,7 @@
+[{"progress": 0.000000000, "id": 1, "name": "Users automatically being signed out"}
+,{"progress": 0.753243422, "id": 2, "name": "Text overflows content area"}
+,{"progress": 0.850003343, "id": 3, "name": "Memory leak on connections graph"}
+,{"progress": 0.465434445, "id": 4, "name": "Maps randomly stop working"}
+,{"progress": 0.503453301, "id": 5, "name": "Page loads too slow"}
+,{"progress": 0.234234234, "id": 6, "name": "Add translation button for foreign languages"}
+,{"progress": 1.000000000, "id": 7, "name": "Add tests"}]
