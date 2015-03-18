@@ -4,7 +4,7 @@
     
     createBlock: function(block) {
       var cssClass = "block " + block.status;
-      return React.createElement("span", {className: cssClass});
+      return <span className={cssClass}></span>;
     },
 
     blockData: function() {
@@ -24,9 +24,9 @@
 
     render: function() {
       return (
-        React.createElement("div", {className: "progress"}, 
-           this.blockData().map(this.createBlock) 
-        )
+        <div className="progress">
+          { this.blockData().map(this.createBlock) }
+        </div>
       );
     },
 
@@ -35,10 +35,10 @@
   views.Issue = React.createBackboneClass({
     render: function() {
       return (
-        React.createElement("div", {className: "issue"}, 
-          React.createElement("div", {className: "name"}, this.props.model.get("name")), 
-          React.createElement(views.Progress, {model: this.props.model})
-        )
+        <div className="issue">
+          <div className="name">{this.props.model.get("name")}</div>
+          <views.Progress model={this.props.model}/>
+        </div>
       );
     }
   });
@@ -46,14 +46,14 @@
   views.IssueList = React.createBackboneClass({
 
     getItem: function(model, index) {
-      return React.createElement(views.Issue, {model: model, key: index});
+      return <views.Issue model={model} key={index}/>;
     },
 
     render: function() {
       return (
-        React.createElement("div", null, 
-           this.props.collection.map(this.getItem)
-        )
+        <div>
+          { this.props.collection.map(this.getItem)}
+        </div>
       );
     }
 
